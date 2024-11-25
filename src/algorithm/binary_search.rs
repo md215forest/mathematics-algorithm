@@ -20,15 +20,13 @@ pub fn search(word: &str) -> i32 {
     let words: Vec<Word> = reader
         .lines()
         .enumerate()
-        .map(
-            (|(index, line)| {
-                let line = line.unwrap();
-                Word {
-                    word: line.trim().to_string(),
-                    index: index + 1,
-                }
-            }),
-        )
+        .map(|(index, line)| {
+            let line = line.unwrap();
+            Word {
+                word: line.trim().to_string(),
+                index: index + 1,
+            }
+        })
         .collect();
 
     search_word(word, words, 1)
