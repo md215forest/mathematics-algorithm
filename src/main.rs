@@ -1,5 +1,5 @@
 mod algorithm;
 fn main() {
-    algorithm::test::test();
-    println!("Hello, world!");
+    let count = algorithm::full_search::calculate(3, 4);
+    println!("{}", count);
 }
