@@ -1,4 +1,4 @@
-pub fn calculate() {
+pub fn has_answer() -> bool {
     let n: usize = 3;
     let s: i64 = 11;
 
@@ -12,9 +12,8 @@ pub fn calculate() {
             }
         }
         if sum == s {
-            println!("Yes");
-            return;
+            return true;
         }
     }
-    println!("No");
+    false
 }
