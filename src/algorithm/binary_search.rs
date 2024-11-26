@@ -12,7 +12,7 @@ struct Word {
  * Binary search algorithm
  * words.txtからできるだけ少ない検索で位置を出力する
  */
-pub fn search(word: &str) -> i32 {
+pub fn search(target: &str) -> i32 {
     let path = Path::new("src/public/words.txt");
     let file = File::open(&path).expect("Could not open file");
     let reader = io::BufReader::new(file);
@@ -29,22 +29,32 @@ pub fn search(word: &str) -> i32 {
         })
         .collect();
 
-    search_word(word, words, 1)
+    search_word(target, words, 1)
 }
 
-fn search_word(word: &str, words: Vec<Word>, count: i32) -> i32 {
+fn search_word(target: &str, words: Vec<Word>, count: i32) -> i32 {
+    let words_length = words.len();
+    if words_length == 1 {
+        println!("{}", words[0].word);
+        return -1;
+    }
     let mid = words.len() / 2;
 
-    if words[mid].word == word {
+    let word = &words[mid].word;
+
+    if word == target {
         return words[mid].index as i32;
     }
 
-    let mut word_vec = vec![word, &words[mid].word];
-    word_vec.sort();
-    let is_apper = word_vec[0] == word;
-    if is_apper {
-        search_word(word, words[0..mid].to_vec(), count + 1)
+    if is_apper(target, &words[mid]) {
+        search_word(target, words[0..mid].to_vec(), count + 1)
     } else {
-        search_word(word, words[mid..].to_vec(), count + 1)
+        search_word(target, words[mid..].to_vec(), count + 1)
     }
+}
+
+fn is_apper(target: &str, word: &Word) -> bool {
+    let mut word_vec = vec![target, &word.word];
+    word_vec.sort();
+    word_vec[0] == target
 }
