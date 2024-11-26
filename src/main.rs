@@ -12,13 +12,6 @@ fn main() {
         if has_answer { "Yes" } else { "No" }
     );
 
-    let is_prime = algorithm::primality_test::is_prime(7);
-    println!(
-        "素数かどうか: {}",
-        if is_prime {
-            "素数"
-        } else {
-            "素数ではない"
-        }
-    );
+    let prime_vec = algorithm::primality_test::prime_factorization(20211225);
+    println!("素因数のリスト: {:?}", prime_vec);
 }
