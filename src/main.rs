@@ -5,4 +5,6 @@ fn main() {
 
     let index = algorithm::binary_search::search("bobby");
     println!("単語の位置は{}", index);
+
+    algorithm::bit_full_serach::calculate();
 }
