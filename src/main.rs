@@ -19,6 +19,9 @@ fn main() {
     // let great_common_divisor = algorithm::euclidean_algorithm::calculate(123, 246);
     // println!("最大公約数: {}", great_common_divisor);
 
-    let pi = algorithm::monte_carlo::calculate();
-    println!("円周率の近似値: {}", pi);
+    // let pi = algorithm::monte_carlo::calculate();
+    // println!("円周率の近似値: {}", pi);
+
+    let sorted_vec = algorithm::sort::sort(vec![4, 65, 2, -31, -1, 99, 83, 782, 1]);
+    println!("ソート後の配列: {:?}", sorted_vec);
 }
