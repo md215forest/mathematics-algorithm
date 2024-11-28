@@ -14,4 +14,7 @@ fn main() {
 
     let prime_vec = algorithm::primality_test::prime_factorization(20211225);
     println!("素因数のリスト: {:?}", prime_vec);
+
+    let great_common_divisor = algorithm::euclidean_algorithm::calculate(123, 500);
+    println!("最大公約数: {}", great_common_divisor);
 }
