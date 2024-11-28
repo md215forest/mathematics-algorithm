@@ -1,13 +1,17 @@
-pub fn calculate(mut n: i32, mut m: i32) -> i32 {
-    while n >= 1 && m >= 1 {
-        if n < m {
-            m = m % n
+use std::cmp::{max, min};
+
+pub fn calculate(n: i32, m: i32) -> i32 {
+    let mut larger = max(n, m);
+    let mut smaller = min(n, m);
+    while larger >= 1 && smaller >= 1 {
+        if smaller < larger {
+            larger = larger % smaller;
         } else {
-            n = n % m
+            smaller = smaller % larger;
         }
     }
-    if n >= 1 {
-        return n;
+    if smaller >= 1 {
+        return smaller;
     }
-    m
+    larger
 }
