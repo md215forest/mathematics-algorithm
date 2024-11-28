@@ -7,7 +7,7 @@ pub fn calculate(n: i32, m: i32) -> i32 {
         if smaller < larger {
             larger = larger % smaller;
         } else {
-            smaller = smaller % larger;
+            smaller = smaller % larger
         }
     }
     if smaller >= 1 {
