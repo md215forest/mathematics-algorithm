@@ -36,8 +36,11 @@ fn main() {
     // let _result = algorithm::merge_sort::run(get_array(10000, 10001));
     // println!("マージソート後の配列: {:?}", result);
 
-    let min_step = algorithm::dynamic_programming::frog_movement(vec![8, 6, 9, 2, 1]);
-    println!("最小の移動回数: {}", min_step);
+    // let min_step = algorithm::dynamic_programming::frog_movement(vec![8, 6, 9, 2, 1]);
+    // println!("最小の移動回数: {}", min_step);
+
+    let ways = algorithm::dynamic_programming::climb_stairs(30);
+    println!("登る方法の数: {}", ways);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
