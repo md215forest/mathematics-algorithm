@@ -1,4 +1,12 @@
-pub fn sort(a_array: Vec<i32>, b_array: Vec<i32>) -> Vec<i32> {
+pub fn run(array: Vec<i32>) -> Vec<i32> {
+    let start = std::time::Instant::now();
+    let sorted_array = merge_sort(&array);
+    let duration = start.elapsed();
+    println!("マージソートの実行時間: {:?}", duration);
+    sorted_array
+}
+
+fn sort(a_array: Vec<i32>, b_array: Vec<i32>) -> Vec<i32> {
     let mut a_index = 0;
     let mut b_index = 0;
     let mut result = Vec::new();
@@ -20,14 +28,6 @@ pub fn sort(a_array: Vec<i32>, b_array: Vec<i32>) -> Vec<i32> {
         b_index += 1;
     }
     result
-}
-
-pub fn run(array: Vec<i32>) -> Vec<i32> {
-    let start = std::time::Instant::now();
-    let sorted_array = merge_sort(&array);
-    let duration = start.elapsed();
-    println!("マージソートの実行時間: {:?}", duration);
-    sorted_array
 }
 
 fn merge_sort(array: &[i32]) -> Vec<i32> {
