@@ -39,8 +39,11 @@ fn main() {
     // let min_step = algorithm::dynamic_programming::frog_movement(vec![8, 6, 9, 2, 1]);
     // println!("最小の移動回数: {}", min_step);
 
-    let ways = algorithm::dynamic_programming::climb_stairs(30);
-    println!("登る方法の数: {}", ways);
+    // let ways = algorithm::dynamic_programming::climb_stairs(30);
+    // println!("登る方法の数: {}", ways);
+
+    let max_value = algorithm::dynamic_programming::knapsack(10, get_items(4));
+    println!("最大の価値: {}", max_value);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
@@ -51,4 +54,16 @@ fn _get_array(n: i32, max: i32) -> Vec<i32> {
         array.push(num);
     }
     array
+}
+
+fn get_items(n: i32) -> Vec<algorithm::dynamic_programming::Item> {
+    let mut items = Vec::new();
+    for _i in 0..n {
+        let mut rng = rand::thread_rng();
+        let weight = rng.gen_range(1..10);
+        let value = rng.gen_range(1..10) * 10;
+        let item = algorithm::dynamic_programming::Item::new(weight as usize, value as usize);
+        items.push(item);
+    }
+    items
 }
