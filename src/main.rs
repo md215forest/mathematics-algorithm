@@ -16,12 +16,15 @@ fn main() {
     // let prime_vec = algorithm::primality_test::prime_factorization(20211225);
     // println!("素因数のリスト: {:?}", prime_vec);
 
-    let great_common_divisor = algorithm::euclidean_algorithm::calculate(123, 241);
-    println!("最大公約数: {}", great_common_divisor);
+    // let great_common_divisor = algorithm::euclidean_algorithm::calculate(123, 241);
+    // println!("最大公約数: {}", great_common_divisor);
 
     // let pi = algorithm::monte_carlo::calculate();
     // println!("円周率の近似値: {}", pi);
 
     // let sorted_vec = algorithm::sort::sort(vec![4, 65, 2, -31, -1, 99, 83, 782, 1]);
     // println!("ソート後の配列: {:?}", sorted_vec);
+
+    let sum = algorithm::devide_and_conquer::calculate(4);
+    println!("リストの1個目から4個目までの和: {}", sum);
 }
