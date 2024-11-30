@@ -18,6 +18,9 @@ fn main() {
     // let prime_vec = algorithm::primality_test::prime_factorization(20211225);
     // println!("素因数のリスト: {:?}", prime_vec);
 
+    // let _primes = algorithm::primality_test::get_primes(1000000);
+    // println!("素数のリスト: {:?}", primes);
+
     // let great_common_divisor = algorithm::euclidean_algorithm::calculate(123, 241);
     // println!("最大公約数: {}", great_common_divisor);
 
@@ -48,8 +51,11 @@ fn main() {
     // let cumulative_total = algorithm::difference_cumulative::caluculate(get_array(10, 10));
     // println!("累積和: {:?}", cumulative_total);
 
-    let square_root = algorithm::newton_method::square_root(2.0);
-    println!("平方根: {}", square_root);
+    // let square_root = algorithm::newton_method::square_root(2.0);
+    // println!("平方根: {}", square_root);
+
+    // let _primes = algorithm::sieve_of_erastosthenes::get_primes(1000000);
+    // println!("素数のリスト: {:?}", primes);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
