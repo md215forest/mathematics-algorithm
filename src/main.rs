@@ -42,11 +42,14 @@ fn main() {
     // let ways = algorithm::dynamic_programming::climb_stairs(30);
     // println!("登る方法の数: {}", ways);
 
-    let max_value = algorithm::dynamic_programming::knapsack(10, get_items(4));
-    println!("最大の価値: {}", max_value);
+    // let max_value = algorithm::dynamic_programming::knapsack(10, get_items(4));
+    // println!("最大の価値: {}", max_value);
+
+    let cumulative_total = algorithm::difference_cumulative::caluculate(get_array(10, 10));
+    println!("累積和: {:?}", cumulative_total);
 }
 
-fn _get_array(n: i32, max: i32) -> Vec<i32> {
+fn get_array(n: i32, max: i32) -> Vec<i32> {
     let mut array = Vec::new();
     for _i in 0..n {
         let mut rng = rand::thread_rng();
@@ -56,14 +59,14 @@ fn _get_array(n: i32, max: i32) -> Vec<i32> {
     array
 }
 
-fn get_items(n: i32) -> Vec<algorithm::dynamic_programming::Item> {
-    let mut items = Vec::new();
-    for _i in 0..n {
-        let mut rng = rand::thread_rng();
-        let weight = rng.gen_range(1..10);
-        let value = rng.gen_range(1..10) * 10;
-        let item = algorithm::dynamic_programming::Item::new(weight as usize, value as usize);
-        items.push(item);
-    }
-    items
-}
+// fn get_items(n: i32) -> Vec<algorithm::dynamic_programming::Item> {
+//     let mut items = Vec::new();
+//     for _i in 0..n {
+//         let mut rng = rand::thread_rng();
+//         let weight = rng.gen_range(1..10);
+//         let value = rng.gen_range(1..10) * 10;
+//         let item = algorithm::dynamic_programming::Item::new(weight as usize, value as usize);
+//         items.push(item);
+//     }
+//     items
+// }
