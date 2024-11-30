@@ -45,11 +45,14 @@ fn main() {
     // let max_value = algorithm::dynamic_programming::knapsack(10, get_items(4));
     // println!("最大の価値: {}", max_value);
 
-    let cumulative_total = algorithm::difference_cumulative::caluculate(get_array(10, 10));
-    println!("累積和: {:?}", cumulative_total);
+    // let cumulative_total = algorithm::difference_cumulative::caluculate(get_array(10, 10));
+    // println!("累積和: {:?}", cumulative_total);
+
+    let square_root = algorithm::newton_method::square_root(2.0);
+    println!("平方根: {}", square_root);
 }
 
-fn get_array(n: i32, max: i32) -> Vec<i32> {
+fn _get_array(n: i32, max: i32) -> Vec<i32> {
     let mut array = Vec::new();
     for _i in 0..n {
         let mut rng = rand::thread_rng();

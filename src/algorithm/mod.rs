@@ -8,4 +8,5 @@
 // pub mod devide_and_conquer;
 // pub mod merge_sort;
 // pub mod dynamic_programming;
-pub mod difference_cumulative;
+// pub mod difference_cumulative;
+pub mod newton_method;
