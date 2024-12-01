@@ -11,3 +11,4 @@
 // pub mod primality_test;
 // pub mod sieve_of_erastosthenes;
 // pub mod sort;
+pub mod depth_first_search;
