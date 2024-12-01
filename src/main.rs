@@ -57,7 +57,10 @@ fn main() {
     // let _primes = algorithm::sieve_of_erastosthenes::get_primes(1000000);
     // println!("素数のリスト: {:?}", primes);
 
-    let connected = algorithm::depth_first_search::run();
+    // let connected = algorithm::depth_first_search::run();
+    // println!("連結しているか: {}", connected);
+
+    let connected = algorithm::breadth_first_search::run();
     println!("連結しているか: {}", connected);
 }
 
