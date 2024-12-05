@@ -12,4 +12,5 @@
 // pub mod sieve_of_erastosthenes;
 // pub mod sort;
 // pub mod depth_first_search;
-pub mod breadth_first_search;
+// pub mod breadth_first_search;
+pub mod repeated_squaring;

@@ -60,8 +60,11 @@ fn main() {
     // let connected = algorithm::depth_first_search::run();
     // println!("連結しているか: {}", connected);
 
-    let connected = algorithm::breadth_first_search::run();
-    println!("連結しているか: {}", connected);
+    // let connected = algorithm::breadth_first_search::run();
+    // println!("連結しているか: {}", connected);
+
+    let remainder = algorithm::repeated_squaring::run2(3, 40);
+    println!("余り: {}", remainder);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
