@@ -66,7 +66,8 @@ fn main() {
     // let remainder = algorithm::repeated_squaring::run2(3, 40);
     // println!("余り: {}", remainder);
 
-    let fibonacci = algorithm::fibonacci::run(10);
+    let fibonacci = algorithm::fibonacci::run(50);
+
     println!("フィボナッチ数列: {:?}", fibonacci);
 }
 
