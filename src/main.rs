@@ -63,8 +63,11 @@ fn main() {
     // let connected = algorithm::breadth_first_search::run();
     // println!("連結しているか: {}", connected);
 
-    let remainder = algorithm::repeated_squaring::run2(3, 40);
-    println!("余り: {}", remainder);
+    // let remainder = algorithm::repeated_squaring::run2(3, 40);
+    // println!("余り: {}", remainder);
+
+    let fibonacci = algorithm::fibonacci::run(50);
+    println!("フィボナッチ数列: {:?}", fibonacci);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
