@@ -14,4 +14,5 @@
 // pub mod depth_first_search;
 // pub mod breadth_first_search;
 // pub mod repeated_squaring;
-pub mod fibonacci;
+// pub mod fibonacci;
+pub mod complementary_event;

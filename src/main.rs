@@ -66,8 +66,11 @@ fn main() {
     // let remainder = algorithm::repeated_squaring::run2(3, 40);
     // println!("余り: {}", remainder);
 
-    let fibonacci = algorithm::fibonacci::run(50);
-    println!("フィボナッチ数列: {:?}", fibonacci);
+    // let fibonacci = algorithm::fibonacci::run(50);
+    // println!("フィボナッチ数列: {:?}", fibonacci);
+
+    let ce = algorithm::complementary_event::run(3, 1);
+    println!("補集合の数: {}", ce);
 }
 
 fn _get_array(n: i32, max: i32) -> Vec<i32> {
